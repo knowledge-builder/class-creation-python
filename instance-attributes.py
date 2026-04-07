@@ -25,16 +25,24 @@ class SimpleForm:
             self.errors = []
 
         if len(self.username) < 3:
-            self.errors.append(self.username)
+            self.errors.append("Username too short")
 
         if len(self.password) < 6:
-            self.errors.append(self.password)
+            self.errors.append("Password too short")
 
         return len(self.errors) == 0
-      
+    
 
 form = SimpleForm("ab", "123")
-form.validate()
-print(form.errors)  # Shows the errors for this particular form
+if not form.validate():
+    print(form.errors)  # Output: ['Username too short', 'Password too short']
+
+"""
+- self.errors is like a box attached to a specific form.
+- .append("message") is like putting a note in the box.
+- Every time something is wrong, you put a new note in the box.
+- After checking everything, you can look inside the box to see all the problems.
+"""
+
 
 
