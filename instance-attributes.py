@@ -34,7 +34,7 @@ class SimpleForm:
       
 
 form = SimpleForm("ab", "123")
-  form.validate()
-  print(form.errors)  # Shows the errors for this particular form
+form.validate()
+print(form.errors)  # Shows the errors for this particular form
 
 
