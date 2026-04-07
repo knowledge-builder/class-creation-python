@@ -1,0 +1,12 @@
+Forward Reference
+
+A forward reference is when you refer to something—like a class or type—before it has been fully created or defined.
+
+
+Purpose:
+  It allows you to refer to a class or type that hasn’t been fully defined yet.
+  This is useful when:
+    - A class needs to reference itself (like a linked list or tree node).
+    - Two classes refer to each other.
+
+
